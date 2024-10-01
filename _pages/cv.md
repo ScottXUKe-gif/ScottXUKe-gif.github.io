@@ -39,11 +39,11 @@ redirect_from:
 ## Publications
 <ul>
   <li>
-    **Liu, C., Xu, K., Shen, L. L., Huguet, G., Wang, Z., Tong, A., Bzdok, D., Stewart, J., Wang, J. C., Del Priore, L. V., Krishnaswamy, S.** "Imageflownet: Forecasting multiscale trajectories of disease progression with irregularly-sampled longitudinal medical images." 
+    Liu, C., Xu, K., Shen, L. L., Huguet, G., Wang, Z., Tong, A., Bzdok, D., Stewart, J., Wang, J. C., Del Priore, L. V., Krishnaswamy, S. "Imageflownet: Forecasting multiscale trajectories of disease progression with irregularly-sampled longitudinal medical images." 
     <a href="https://arxiv.org/abs/2406.14794" target="_blank">arXiv:2406.14794</a>
   </li>
   <li>
-    **Borsari, B., Frank, M., Wattenberg, E. S., Xu, K., Liu, S. X., Yu, X., Gerstein, M.** "ChronODE: A Framework to Integrate Time-Series Multi-Omics Data Based on Ordinary Differential Equations Combined with Machine Learning." 
+    Borsari, B., Frank, M., Wattenberg, E. S., Xu, K., Liu, S. X., Yu, X., Gerstein, M. "ChronODE: A Framework to Integrate Time-Series Multi-Omics Data Based on Ordinary Differential Equations Combined with Machine Learning." 
     <a href="https://www.biorxiv.org/content/10.1101/2023.12.13.571513v1.abstract" target="_blank">bioRxiv:10.1101/2023.12.13.571513v1</a>
   </li>
 </ul>
