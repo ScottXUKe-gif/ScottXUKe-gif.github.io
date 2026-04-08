@@ -1,0 +1,149 @@
+{
+  "basics": {
+    "name": "Ke Xu",
+    "label": "PhD Student",
+    "image": "",
+    "email": "k.xu@yale.edu",
+    "phone": "(608) 867-6776",
+    "url": "https://scottxuke-gif.github.io/",
+    "summary": "PhD student in Computer Science at Yale University, working on machine learning for sequential and dynamical data with applications in computational biology.",
+    "location": {
+      "city": "New Haven",
+      "countryCode": "US",
+      "region": "Connecticut"
+    },
+    "profiles": [
+      {
+        "network": "Google Scholar",
+        "url": "https://scholar.google.com/citations?user=VOd6Z8cAAAAJ&hl=en"
+      }
+    ]
+  },
+  "education": [
+    {
+      "institution": "Yale University",
+      "location": "New Haven, CT",
+      "area": "Computer Science",
+      "studyType": "PhD",
+      "startDate": "2024",
+      "endDate": "2030 (expected)",
+      "score": "",
+      "courses": ["Advisors: Mark Gerstein & Smita Krishnaswamy"]
+    },
+    {
+      "institution": "Yale University",
+      "location": "New Haven, CT",
+      "area": "Biostatistics",
+      "studyType": "Master of Public Health",
+      "startDate": "2022",
+      "endDate": "2024"
+    },
+    {
+      "institution": "University of Wisconsin--Madison",
+      "location": "Madison, WI",
+      "area": "Mathematics",
+      "studyType": "Bachelor of Science",
+      "startDate": "2020",
+      "endDate": "2022",
+      "score": "Dean's List, 2020--2022"
+    },
+    {
+      "institution": "Hong Kong Baptist University",
+      "location": "Hong Kong",
+      "area": "Mathematics & Statistics",
+      "studyType": "Undergraduate Coursework",
+      "startDate": "2017",
+      "endDate": "2020",
+      "score": "Dean's List, 2017--2019"
+    }
+  ],
+  "work": [
+    {
+      "name": "Krishnaswamy Lab, Yale University",
+      "position": "Graduate Research Assistant",
+      "url": "https://krishnaswamylab.org/",
+      "startDate": "2024-04",
+      "endDate": "",
+      "summary": "Advisor: Prof. Smita Krishnaswamy",
+      "highlights": [
+        "ImageFlowNet: Neural ODE/SDE-based model for forecasting disease progression trajectories from longitudinal medical images (ICASSP 2025, co-first author)",
+        "STAGED: Multi-agent neural network for modeling cellular interaction dynamics via message passing on learned communication graphs (MLCB 2025, co-first author)"
+      ]
+    },
+    {
+      "name": "Gerstein Lab, Yale University",
+      "position": "Graduate Research Assistant",
+      "url": "https://www.gersteinlab.org/",
+      "startDate": "2022-06",
+      "endDate": "",
+      "summary": "Advisor: Prof. Mark Gerstein",
+      "highlights": [
+        "ChronODE: ODE-based framework for modeling multi-omic time series across species and developmental stages (Nature Communications 2025)",
+        "WasteWatcher: Unsupervised temporal clustering of longitudinal wastewater microbiome data using EM with B-spline basis functions",
+        "transferQTL: Computational toolkit for tissue-specific eQTL regulatory mechanisms using GTEx data"
+      ]
+    },
+    {
+      "name": "McArdle Laboratory for Cancer Research, UW--Madison",
+      "position": "Undergraduate Research Assistant",
+      "url": "",
+      "startDate": "2022-01",
+      "endDate": "2022-04",
+      "summary": "Advisor: Prof. Huy Dinh",
+      "highlights": [
+        "Bioinformatics analysis of somatic mutations in kidney cancer; inferred cell-type-specific GRNs from single-cell and bulk DNA methylation data"
+      ]
+    }
+  ],
+  "awards": [
+    {
+      "title": "Fan Family Fellowship",
+      "date": "2024",
+      "awarder": "Yale University"
+    },
+    {
+      "title": "Trainee Highlight Award Honorable Mention",
+      "date": "2023",
+      "awarder": "BRAIN Initiative Meeting"
+    },
+    {
+      "title": "Dean's List",
+      "date": "2020--2022",
+      "awarder": "University of Wisconsin--Madison"
+    },
+    {
+      "title": "Mathematical Contest in Modeling, Honorable Mention",
+      "date": "2019",
+      "awarder": "COMAP"
+    },
+    {
+      "title": "Dean's List",
+      "date": "2017--2019",
+      "awarder": "Hong Kong Baptist University"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Programming",
+      "keywords": ["Python (PyTorch, JAX)", "R", "Java", "SAS"]
+    },
+    {
+      "name": "Bioinformatics",
+      "keywords": ["Seurat", "GATK", "Samtools", "Picard", "scanpy"]
+    },
+    {
+      "name": "Languages",
+      "keywords": ["Chinese (native)", "English (proficient)"]
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "NeurIPS 2024",
+      "position": "Reviewer"
+    },
+    {
+      "organization": "ICLR 2025",
+      "position": "Reviewer"
+    }
+  ]
+}
