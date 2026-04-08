@@ -1304,3 +1304,14 @@ ninja-keys::part(ninja-input-wrapper) {
   background-color: var(--global-theme-color);
   color: var(--global-text-color);
 }
+
+// CV date badges - override ugly pink/red with theme color
+.danger-color-dark {
+  background-color: var(--global-theme-color) !important;
+}
+.badge {
+  font-size: 0.7rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.03em;
+  padding: 0.35em 0.65em !important;
+}
