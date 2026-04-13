@@ -9,7 +9,7 @@ profile:
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>k.xu@yale.edu</p>
+    <p>k.xu [at] yale [dot] edu</p>
     <p>Department of Computer Science</p>
     <p>Yale University</p>
     <p>New Haven, CT</p>
