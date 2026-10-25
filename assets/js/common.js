@@ -1,4 +1,14 @@
 $(document).ready(function () {
+  // Make citation and abstract controls reachable and operable by keyboard.
+  $(".publications .links a[role='button']:not([href])")
+    .attr("tabindex", "0")
+    .on("keydown", function (event) {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        $(this).trigger("click");
+      }
+    });
+
   // add toggle functionality to abstract, award and bibtex buttons
   $("a.abstract").click(function () {
     $(this).parent().parent().find(".abstract.hidden").toggleClass("open");

@@ -1,80 +1,52 @@
 ---
 layout: default
 ---
-<div class="post">
-  <header class="post-header">
-    <h1 class="post-title">
-      {% if site.title == 'blank' %}
-        <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
-        {{ site.last_name }}
-      {% else %}
-        {{ site.title }}
-      {% endif %}
-    </h1>
-    <p class="desc">{{ page.subtitle }}</p>
-  </header>
-
-  <article>
-    {% if page.profile %}
-      <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
-        {% if page.profile.image %}
-          {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
-          {% if page.profile.image_circular %}
-            {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
-          {% else %}
-            {% assign profile_image_class = 'img-fluid z-depth-1
-      rounded' %}
-          {% endif %}
-          {% capture sizes %}(min-width: {{site.max_width}}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px)
-      30vw, 95vw"{% endcapture %}
-          {%
-            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
-            cache_bust=true
-          %}
-        {% endif %}
-        {% if page.profile.more_info %}
-          <div class="more-info">{{ page.profile.more_info }}</div>
-        {% endif %}
-      </div>
-    {% endif %}
-
-    <div class="clearfix">{{ content }}</div>
-
-    <!-- News -->
-    {% if page.news and site.announcements.enabled %}
-      <h2>
-        <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
-      </h2>
-      {% include news.liquid limit=true %}
-    {% endif %}
-
-    <!-- Latest posts -->
-    {% if site.latest_posts.enabled %}
-      <h2>
-        <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
-      </h2>
-      {% include latest_posts.liquid %}
-    {% endif %}
-
-    <!-- Selected papers -->
-    {% if page.selected_papers %}
-      <h2>
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
-      </h2>
-      {% include selected_papers.liquid %}
-    {% endif %}
-
-    <!-- Social -->
-    {% if page.social %}
-      <div class="social">
-        <div class="contact-icons">{% include social.liquid %}</div>
-
-        <div class="contact-note">{{ site.contact_note }}</div>
-      </div>
-    {% endif %}
-
-    {% if site.newsletter.enabled and site.footer_fixed %}
-      {% include scripts/newsletter.liquid center=true %}
-    {% endif %}
-  </article>
+<div class="academic-home">
+  <section class="intro" aria-labelledby="intro-title">
+    <div class="intro-copy">
+      <p class="eyebrow">Machine learning &amp; computational biology</p>
+      <h1 id="intro-title">Ke Xu <span lang="zh">许可</span></h1>
+      <p class="intro-role">PhD student in Computer Science <span aria-hidden="true">/</span> Yale University</p>
+      <p class="intro-lead">Learning how biological systems change.</p>
+      <div class="intro-bio">{{ content }}</div>
+      <nav class="profile-links" aria-label="Academic profiles">
+        <a href="mailto:{{ site.email | encode_email }}">Email <span aria-hidden="true">↗</span></a>
+        <a href="https://scholar.google.com/citations?user={{ site.scholar_userid }}">Google Scholar <span aria-hidden="true">↗</span></a>
+        <a href="https://github.com/{{ site.github_username }}">GitHub <span aria-hidden="true">↗</span></a>
+        <a href="{{ '/cv/' | relative_url }}">CV <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+    <figure class="intro-portrait">
+      <img src="{{ '/assets/img/prof_pic.jpg' | relative_url }}" alt="Ke Xu" width="1924" height="1280" fetchpriority="high">
+      <figcaption>Yale University <span>New Haven, CT</span></figcaption>
+    </figure>
+  </section>
+  <section class="home-section" aria-labelledby="research-title">
+    <div class="section-heading"><h2 id="research-title">Research</h2><p>Methods &amp; questions</p></div>
+    <div class="research-directions">
+      <div><span class="research-number" aria-hidden="true">01</span><h3>Generative dynamics</h3><p>Continuous-time models that learn trajectories from sparse and irregular observations.</p></div>
+      <div><span class="research-number" aria-hidden="true">02</span><h3>Geometry &amp; representation</h3><p>Optimal transport and learned representations that respect the structure of biological data.</p></div>
+      <div><span class="research-number" aria-hidden="true">03</span><h3>Cells, perturbations &amp; time</h3><p>Single-cell responses, cellular interactions, multi-omics, and longitudinal medical imaging.</p></div>
+    </div>
+  </section>
+  {% if page.news and site.announcements.enabled %}
+    <section class="home-section" aria-labelledby="news-title">
+      <div class="section-heading"><h2 id="news-title">News</h2><a class="quiet-link" href="{{ '/news/' | relative_url }}">All updates <span aria-hidden="true">↗</span></a></div>
+      <div>{% include news.liquid limit=true %}</div>
+    </section>
+  {% endif %}
+  {% if page.selected_papers %}
+    <section class="home-section" aria-labelledby="papers-title">
+      <div class="section-heading"><h2 id="papers-title">Selected work</h2><a class="quiet-link" href="{{ '/publications/' | relative_url }}">All publications <span aria-hidden="true">↗</span></a><p class="contribution-note">* Equal contribution<br>† Shared secondary contribution</p></div>
+      <div>{% include selected_papers.liquid %}</div>
+    </section>
+  {% endif %}
+  <section class="home-section education-section" aria-labelledby="education-title">
+    <div class="section-heading"><h2 id="education-title">Education</h2></div>
+    <div class="degrees">
+      {% for degree in site.data.resume.education %}
+        <div class="degree"><div><h3>{{ degree.institution | replace: '--', '–' }}</h3><p>{{ degree.studyType }} · {{ degree.area }}</p></div><span>{{ degree.endDate }}</span></div>
+      {% endfor %}
+    </div>
+  </section>
 </div>

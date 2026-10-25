@@ -1,97 +1,95 @@
 - title: General Information
   type: map
   contents:
-    - name: Full Name
-      value: Albert Einstein
-    - name: Date of Birth
-      value: 14th March 1879
-    - name: Languages
-      value: English, German
+    - name: "Full Name"
+      value: "Ke Xu"
+    - name: "Current Position"
+      value: "PhD Student in Computer Science, Yale University"
+    - name: "Advisors"
+      value: "Mark Gerstein and Smita Krishnaswamy"
+    - name: "Email"
+      value: "k.xu@yale.edu"
+    - name: "Website"
+      value: "https://kexu.org/"
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
-      description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
-      description:
-        - Description 1.
-        - Description 2.
+    - title: "Master of Public Health in Biostatistics"
+      institution: "Yale University"
+      year: "2024"
+    - title: "Bachelor of Science in Mathematics"
+      institution: "University of Wisconsin–Madison"
+      year: "2022"
 
-- title: Experience
+- title: Research Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+    - title: "Graduate Research Assistant"
+      institution: "Krishnaswamy Lab, Yale University"
+      year: "2024-04 – Present"
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
+        - "Advisor: Prof. Smita Krishnaswamy"
+        - "GeoSinkhorn Flow: Geometry-aware conditional flow matching for perturbation responses in single-cell data (bioRxiv 2026); presented at NECB 2026"
+        - "ImageFlowNet: Neural ODE/SDE-based model for forecasting disease progression trajectories from longitudinal medical images (ICASSP 2025, oral presentation, co-first author)"
+        - "STAGED: Multi-agent neural network for modeling cellular interaction dynamics via message passing on learned communication graphs (MLCB 2025, oral presentation, co-first author)"
+    - title: "Graduate Research Assistant"
+      institution: "Gerstein Lab, Yale University"
+      year: "2022-06 – Present"
       description:
-        - Description 1.
-        - Description 2.
-
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
+        - "Advisor: Prof. Mark Gerstein"
+        - "ChronODE: ODE-based framework for modeling multi-omic time series across species and developmental stages (Nature Communications 2025)"
+        - "WasteWatcher: Unsupervised temporal clustering of longitudinal wastewater microbiome data using EM with B-spline basis functions"
+        - "transferQTL: Computational toolkit for tissue-specific eQTL regulatory mechanisms using GTEx data"
+    - title: "Undergraduate Research Assistant"
+      institution: "McArdle Laboratory for Cancer Research, UW--Madison"
+      year: "2022-01 – 2022-04"
       description:
-
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
-
-- title: Open Source Projects
-  type: time_table
-  contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+        - "Advisor: Prof. Huy Dinh"
+        - "Bioinformatics analysis of somatic mutations in kidney cancer; inferred cell-type-specific GRNs from single-cell and bulk DNA methylation data"
 
 - title: Honors and Awards
   type: time_table
   contents:
-    - year: 1921
-      items:
-        - Nobel Prize in Physics
-        - Matteucci Medal
-    - year: 2029
-      items:
-        - Max Planck Medal
+    - title: "Fan Family Fellowship"
+      institution: "Yale University"
+      year: "2024"
+    - title: "Trainee Highlight Award Honorable Mention"
+      institution: "BRAIN Initiative Meeting"
+      year: "2023"
+    - title: "Dean's List"
+      institution: "University of Wisconsin--Madison"
+      year: "2020--2022"
+    - title: "Mathematical Contest in Modeling, Honorable Mention"
+      institution: "COMAP"
+      year: "2019"
+    - title: "Dean's List"
+      institution: "Hong Kong Baptist University"
+      year: "2017--2019"
 
-- title: Academic Interests
+- title: Skills
   type: nested_list
   contents:
-    - title: Topic 1.
+    - title: "Programming"
       items:
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
+        - "Python (PyTorch, JAX)"
+        - "R"
+        - "Java"
+        - "SAS"
+    - title: "Bioinformatics"
       items:
-        - Description 1.
-        - Description 2.
+        - "Seurat"
+        - "GATK"
+        - "Samtools"
+        - "Picard"
+        - "scanpy"
+    - title: "Languages"
+      items:
+        - "Chinese (native)"
+        - "English (proficient)"
 
-- title: Other Interests
+- title: Academic Service
   type: list
   contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+    - "Reviewer, NeurIPS 2024"
+    - "Reviewer, ICLR 2025"

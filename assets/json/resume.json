@@ -1,12 +1,12 @@
 {
   "basics": {
     "name": "Ke Xu",
-    "label": "PhD Student",
+    "label": "PhD Student in Computer Science",
     "image": "",
     "email": "k.xu@yale.edu",
     "phone": "",
-    "url": "https://scottxuke-gif.github.io/",
-    "summary": "PhD student in Computer Science at Yale University, working on machine learning for sequential and dynamical data with applications in computational biology.",
+    "url": "https://kexu.org/",
+    "summary": "PhD student in Computer Science at Yale University, co-advised by Mark Gerstein and Smita Krishnaswamy. I develop machine learning methods for biological dynamics, with a focus on generative modeling, optimal transport, and single-cell data.",
     "location": {
       "city": "New Haven",
       "countryCode": "US",
@@ -23,23 +23,13 @@
     {
       "institution": "Yale University",
       "location": "New Haven, CT",
-      "area": "Computer Science",
-      "studyType": "PhD",
-      "startDate": "2024",
-      "endDate": "Present",
-      "score": "",
-      "courses": ["Advisors: Mark Gerstein & Smita Krishnaswamy"]
-    },
-    {
-      "institution": "Yale University",
-      "location": "New Haven, CT",
       "area": "Biostatistics",
       "studyType": "Master of Public Health",
       "startDate": "2022",
       "endDate": "2024"
     },
     {
-      "institution": "University of Wisconsin--Madison",
+      "institution": "University of Wisconsin–Madison",
       "location": "Madison, WI",
       "area": "Mathematics",
       "studyType": "Bachelor of Science",
@@ -57,8 +47,9 @@
       "endDate": "",
       "summary": "Advisor: Prof. Smita Krishnaswamy",
       "highlights": [
-        "ImageFlowNet: Neural ODE/SDE-based model for forecasting disease progression trajectories from longitudinal medical images (ICASSP 2025, co-first author)",
-        "STAGED: Multi-agent neural network for modeling cellular interaction dynamics via message passing on learned communication graphs (MLCB 2025, co-first author)"
+        "GeoSinkhorn Flow: Geometry-aware conditional flow matching for perturbation responses in single-cell data (bioRxiv 2026); presented at NECB 2026",
+        "ImageFlowNet: Neural ODE/SDE-based model for forecasting disease progression trajectories from longitudinal medical images (ICASSP 2025, oral presentation, co-first author)",
+        "STAGED: Multi-agent neural network for modeling cellular interaction dynamics via message passing on learned communication graphs (MLCB 2025, oral presentation, co-first author)"
       ]
     },
     {
@@ -116,15 +107,29 @@
   "skills": [
     {
       "name": "Programming",
-      "keywords": ["Python (PyTorch, JAX)", "R", "Java", "SAS"]
+      "keywords": [
+        "Python (PyTorch, JAX)",
+        "R",
+        "Java",
+        "SAS"
+      ]
     },
     {
       "name": "Bioinformatics",
-      "keywords": ["Seurat", "GATK", "Samtools", "Picard", "scanpy"]
+      "keywords": [
+        "Seurat",
+        "GATK",
+        "Samtools",
+        "Picard",
+        "scanpy"
+      ]
     },
     {
       "name": "Languages",
-      "keywords": ["Chinese (native)", "English (proficient)"]
+      "keywords": [
+        "Chinese (native)",
+        "English (proficient)"
+      ]
     }
   ],
   "volunteer": [

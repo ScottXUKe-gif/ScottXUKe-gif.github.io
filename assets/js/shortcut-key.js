@@ -1,11 +1,8 @@
-// Check if the user is on a Mac and update the shortcut key for search accordingly
-document.addEventListener("readystatechange", () => {
-  if (document.readyState === "interactive") {
-    let isMac = navigator.platform.toUpperCase().indexOf("MAC") >= 0;
-    let shortcutKeyElement = document.querySelector("#search-toggle .nav-link");
-    if (shortcutKeyElement && isMac) {
-      // use the unicode for command key
-      shortcutKeyElement.innerHTML = '&#x2318; k <i class="ti ti-search"></i>';
-    }
-  }
+// Keep the search icon compact; expose the platform shortcut accessibly.
+document.addEventListener("DOMContentLoaded", () => {
+  const button = document.getElementById("search-toggle");
+  if (!button) return;
+  const isMac = navigator.platform.toUpperCase().includes("MAC");
+  button.title = isMac ? "Search (⌘ K)" : "Search (Ctrl K)";
+  button.setAttribute("aria-keyshortcuts", isMac ? "Meta+K" : "Control+K");
 });
