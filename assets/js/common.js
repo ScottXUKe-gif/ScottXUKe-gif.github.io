@@ -1,4 +1,22 @@
 $(document).ready(function () {
+  // Close the mobile menu before moving to a section beneath the fixed header.
+  $("#navbarNav .nav-link").on("click", function (event) {
+    const menu = $("#navbarNav");
+    if (!menu.hasClass("show")) return;
+    const destination = new URL(this.href, window.location.href);
+    if (destination.pathname === window.location.pathname && destination.hash) {
+      const target = document.getElementById(decodeURIComponent(destination.hash.slice(1)));
+      if (target) {
+        event.preventDefault();
+        menu.one("hidden.bs.collapse", () => {
+          history.replaceState(null, "", destination.hash);
+          target.scrollIntoView();
+        });
+      }
+    }
+    menu.collapse("hide");
+  });
+
   // Make citation and abstract controls reachable and operable by keyboard.
   $(".publications .links a[role='button']:not([href])")
     .attr("tabindex", "0")
