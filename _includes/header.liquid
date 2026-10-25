@@ -1,5 +1,5 @@
 <header>
-  <nav id="navbar" class="navbar navbar-dark navbar-expand-md {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}" aria-label="Main navigation">
+  <nav id="navbar" class="navbar navbar-light navbar-expand-md {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}" aria-label="Main navigation">
     <div class="container">
       <a class="navbar-brand" href="{{ '/' | relative_url }}">Ke Xu <span lang="zh">/ 许可</span></a>
       <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -7,7 +7,7 @@
       </button>
       <div class="collapse navbar-collapse text-right" id="navbarNav">
         <ul class="navbar-nav ml-auto flex-nowrap">
-          <li class="nav-item{% if page.permalink == '/' %} active{% endif %}"><a class="nav-link" href="{{ '/' | relative_url }}">Home</a></li>
+          <li class="nav-item{% if page.permalink == '/' %} active{% endif %}"><a class="nav-link" href="{{ '/#about' | relative_url }}">About</a></li>
           <li class="nav-item"><a class="nav-link" href="{{ '/#news' | relative_url }}">News</a></li>
           <li class="nav-item{% if page.permalink == '/publications/' %} active{% endif %}"><a class="nav-link" href="{{ '/publications/' | relative_url }}">Publications</a></li>
           <li class="nav-item"><a class="nav-link" href="{{ '/#education' | relative_url }}">Education</a></li>

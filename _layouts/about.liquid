@@ -3,45 +3,55 @@ layout: default
 ---
 <div class="academic-home" id="home">
   <section class="profile-intro" aria-labelledby="intro-title">
-    <aside class="profile-sidebar" aria-label="Profile and contact information">
+    <figure class="profile-portrait">
       <img class="profile-photo" src="{{ '/assets/img/prof_pic.jpg' | relative_url }}" alt="Ke Xu" width="1924" height="1280" fetchpriority="high">
-      <p class="profile-position">Ph.D. Student, Yale University</p>
-      <p class="profile-contact"><a href="mailto:{{ site.email | encode_email }}">{{ site.email }}</a><br>New Haven, CT</p>
-      <nav class="profile-links" aria-label="Academic profiles">
-        <a href="https://scholar.google.com/citations?user={{ site.scholar_userid }}">Google Scholar</a>
+      <figcaption>New Haven, Connecticut</figcaption>
+    </figure>
+    <div class="profile-overview">
+      <h1 id="intro-title">Ke Xu <span lang="zh">许可</span></h1>
+      <p class="profile-position">Ph.D. student in Computer Science, <a href="https://www.yale.edu/">Yale University</a><br>Co-advised by <a href="https://www.gersteinlab.org/">Mark Gerstein</a> and <a href="https://krishnaswamylab.org/">Smita Krishnaswamy</a></p>
+      <nav class="profile-links" aria-label="Contact and academic profiles">
+        <a class="email-link" href="mailto:{{ site.email | encode_email }}">{{ site.email | encode_email }}</a>
+        <a href="https://scholar.google.com/citations?user={{ site.scholar_userid }}">Scholar</a>
         <a href="https://github.com/{{ site.github_username }}">GitHub</a>
         <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}/">LinkedIn</a>
         <a href="{{ '/cv/' | relative_url }}">CV</a>
       </nav>
-    </aside>
-    <div class="profile-bio">
-      <h1 id="intro-title">Ke Xu <span lang="zh">许可</span></h1>
-      {{ content }}
+      <p class="research-statement">I develop machine learning methods to understand how biological systems change over time and respond to perturbations.</p>
+      {% include dynamics_sketch.liquid %}
     </div>
+  </section>
+
+  <section class="home-section" id="about" aria-labelledby="about-title">
+    <div class="section-label"><h2 id="about-title"><span aria-hidden="true">01</span> About</h2></div>
+    <div class="section-content profile-bio">{{ content }}</div>
   </section>
   {% if page.news and site.announcements.enabled %}
     <section class="home-section" id="news" aria-labelledby="news-title">
-      <h2 id="news-title">News <a class="section-more" href="{{ '/news/' | relative_url }}">All updates</a></h2>
-      {% include news.liquid limit=true %}
+      <div class="section-label"><h2 id="news-title"><span aria-hidden="true">02</span> News</h2><a class="section-more" href="{{ '/news/' | relative_url }}">All updates <span aria-hidden="true">↗</span></a></div>
+      <div class="section-content">{% include news.liquid limit=true %}</div>
     </section>
   {% endif %}
   {% if page.selected_papers %}
     <section class="home-section" id="publications" aria-labelledby="papers-title">
-      <h2 id="papers-title">Selected Publications <a class="section-more" href="{{ '/publications/' | relative_url }}">All publications</a></h2>
-      <p class="contribution-note">* Equal contribution · † Shared secondary contribution</p>
-      {% include selected_papers.liquid %}
+      <div class="section-label"><h2 id="papers-title"><span aria-hidden="true">03</span> Publications</h2><a class="section-more" href="{{ '/publications/' | relative_url }}">Full list <span aria-hidden="true">↗</span></a></div>
+      <div class="section-content">
+        <div class="publication-intro"><span>Selected work</span><span>* Equal contribution · † Shared secondary contribution</span></div>
+        {% include selected_papers.liquid %}
+      </div>
     </section>
   {% endif %}
   <section class="home-section" id="education" aria-labelledby="education-title">
-    <h2 id="education-title">Education</h2>
-    <div class="degrees">
+    <div class="section-label"><h2 id="education-title"><span aria-hidden="true">04</span> Education</h2></div>
+    <div class="section-content degrees">
       {% for degree in site.data.resume.education %}
         <div class="degree"><div><h3>{{ degree.institution | replace: '--', '–' }}</h3><p>{{ degree.studyType }} in {{ degree.area }}</p></div><span>{{ degree.endDate }}</span></div>
       {% endfor %}
     </div>
   </section>
   <section class="home-section" id="service" aria-labelledby="service-title">
-    <h2 id="service-title">Service</h2>
-    <p>Reviewer for NeurIPS 2024 and ICLR 2025.</p>
+    <div class="section-label"><h2 id="service-title"><span aria-hidden="true">05</span> Service</h2></div>
+    <div class="section-content"><p>Reviewer for NeurIPS 2024 and ICLR 2025.</p></div>
   </section>
 </div>
+<script defer src="{{ '/assets/js/dynamics-sketch.js' | relative_url | bust_file_cache }}"></script>

@@ -1,4 +1,11 @@
 $(document).ready(function () {
+  // Preserve a useful paper link when a remote figure cannot be loaded.
+  document.querySelectorAll("[data-paper-image]").forEach((image) => {
+    const showFallback = () => image.closest(".paper-visual").classList.add("is-unavailable");
+    image.addEventListener("error", showFallback, { once: true });
+    if (image.complete && image.naturalWidth === 0) showFallback();
+  });
+
   // Close the mobile menu before moving to a section beneath the fixed header.
   $("#navbarNav .nav-link").on("click", function (event) {
     const menu = $("#navbarNav");

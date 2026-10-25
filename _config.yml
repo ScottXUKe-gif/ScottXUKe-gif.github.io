@@ -52,7 +52,7 @@ socials_in_search: true
 bib_search: true
 
 # Dimensions
-max_width: 1140px
+max_width: 1080px
 
 # TODO: add layout settings (single page vs. multi-page)
 
@@ -357,6 +357,7 @@ filtered_bibtex_keywords:
     poster,
     preview,
     preview_alt,
+    preview_label,
     summary,
     topic,
     selected,

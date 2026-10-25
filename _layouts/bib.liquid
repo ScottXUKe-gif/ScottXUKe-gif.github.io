@@ -1,27 +1,36 @@
 ---
 ---
+{% if entry.doi %}
+  {% assign paper_url = entry.doi | prepend: 'https://doi.org/' %}
+{% elsif entry.arxiv %}
+  {% assign paper_url = entry.arxiv | prepend: 'https://arxiv.org/abs/' %}
+{% else %}
+  {% assign paper_url = entry.html %}
+{% endif %}
 <div class="paper-row">
   <div class="paper-preview">
-    {% if entry.preview %}
-      {% if entry.preview contains '://' %}
-        {% assign preview_path = entry.preview %}
-      {% else %}
-        {% assign preview_path = entry.preview | prepend: '/assets/img/publication_preview/' | relative_url %}
+    <a class="paper-visual{% unless entry.preview %} is-unavailable{% endunless %}" href="{{ paper_url }}" aria-label="Read {{ entry.title | escape }}">
+      {% if entry.preview %}
+        {% if entry.preview contains '://' %}
+          {% assign preview_path = entry.preview %}
+        {% else %}
+          {% assign preview_path = entry.preview | prepend: '/assets/img/publication_preview/' | relative_url %}
+        {% endif %}
+        <img src="{{ preview_path }}" alt="{{ entry.preview_alt | default: entry.title | escape }}" loading="lazy" decoding="async" data-paper-image>
       {% endif %}
-      <img src="{{ preview_path }}" alt="{{ entry.preview_alt | default: entry.title | escape }}" loading="lazy">
-    {% endif %}
+      <span class="paper-visual-fallback"><strong>{{ entry.preview_label | default: entry.abbr }}</strong><small>Read the paper <span aria-hidden="true">↗</span></small></span>
+    </a>
     <div class="paper-venue-label">{{ entry.abbr }} <span>{{ entry.year }}</span></div>
   </div>
   <div id="{{ entry.key }}" class="paper-content">
     {% if entry.topic %}<div class="paper-topic">{{ entry.topic }}</div>{% endif %}
     <!-- Title -->
-    <div class="title">
+    <h3 class="title">
       {% if entry.doi %}<a href="https://doi.org/{{ entry.doi }}">{{ entry.title }}</a>
       {% elsif entry.arxiv %}<a href="https://arxiv.org/abs/{{ entry.arxiv }}">{{ entry.title }}</a>
       {% elsif entry.html %}<a href="{{ entry.html }}">{{ entry.title }}</a>
       {% else %}{{ entry.title }}{% endif %}
-    </div>
-    {% if entry.summary %}<p class="paper-summary">{{ entry.summary }}</p>{% endif %}
+    </h3>
     <!-- Author -->
     <div class="author">
       {% assign author_array_size = entry.author_array | size %}
@@ -158,6 +167,8 @@
     <div class="periodical">
       {{ entry.note | strip }}
     </div>
+
+    {% if entry.summary %}<p class="paper-summary">{{ entry.summary }}</p>{% endif %}
 
     <!-- Links/Buttons -->
     <div class="links">

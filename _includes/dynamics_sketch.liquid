@@ -1,0 +1,37 @@
+<figure class="dynamics-sketch" data-dynamics-sketch>
+  <figcaption class="dynamics-caption">
+    <span>A sketch of biological dynamics</span>
+    <span class="dynamics-note">Conceptual illustration</span>
+  </figcaption>
+  <svg class="dynamics-canvas" viewBox="0 0 600 106" role="img" aria-label="A conceptual sketch of several possible trajectories from a shared starting state" xmlns="http://www.w3.org/2000/svg">
+    <title>Possible trajectories through biological state space</title>
+    <desc>Four curves spread from a common starting point. Move the progress slider or press Replay to follow the curves. This is a conceptual illustration, not experimental data.</desc>
+    <g fill="none" stroke-width="1.4" stroke-linecap="round">
+      <path class="dynamics-path" stroke="#295776" opacity="0.24" d="M22 53 C180 53 340 17 578 17" data-trajectory="22,53,180,53,340,17,578,17"/>
+      <path class="dynamics-path" stroke="#78928a" opacity="0.30" d="M22 53 C190 53 365 42 578 42" data-trajectory="22,53,190,53,365,42,578,42"/>
+      <path class="dynamics-path" stroke="#295776" opacity="0.24" d="M22 53 C195 53 370 72 578 72" data-trajectory="22,53,195,53,370,72,578,72"/>
+      <path class="dynamics-path" stroke="#78928a" opacity="0.30" d="M22 53 C190 53 355 91 578 91" data-trajectory="22,53,190,53,355,91,578,91"/>
+    </g>
+    <circle cx="22" cy="53" r="3" fill="#295776" opacity="0.45"/>
+    <g class="dynamics-particles" stroke="#faf9f6" stroke-width="2">
+      <circle data-trajectory-dot="0" cx="217.424" cy="40.328" r="4.7" fill="#295776"/>
+      <circle data-trajectory-dot="1" cx="228.944" cy="49.128" r="4.7" fill="#78928a"/>
+      <circle data-trajectory-dot="2" cx="232.544" cy="59.688" r="4.7" fill="#295776"/>
+      <circle data-trajectory-dot="3" cx="226.064" cy="66.376" r="4.7" fill="#78928a"/>
+    </g>
+    <g fill="none" stroke-width="1.2" opacity="0.65">
+      <circle cx="578" cy="17" r="2.5" stroke="#295776"/>
+      <circle cx="578" cy="42" r="2.5" stroke="#78928a"/>
+      <circle cx="578" cy="72" r="2.5" stroke="#295776"/>
+      <circle cx="578" cy="91" r="2.5" stroke="#78928a"/>
+    </g>
+  </svg>
+  <div class="dynamics-controls">
+    <label class="dynamics-progress">
+      <span class="sr-only">Trajectory progress</span>
+      <input type="range" min="0" max="100" value="40" step="1" data-trajectory-progress aria-valuetext="40 percent along the illustration">
+      <output data-trajectory-value aria-hidden="true">40%</output>
+    </label>
+    <button type="button" class="dynamics-replay" data-trajectory-replay><span aria-hidden="true">↻</span> Replay</button>
+  </div>
+</figure>
